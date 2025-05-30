@@ -1,8 +1,9 @@
 -- models/dimensions/dim_teams.sql
 
 {{ config(
-    materialized="table" -- Or incremental if preferred
+    materialized="table"
 ) }}
+-- Or incremental if preferred
 
 with team_names as (
     -- Consolidate all unique team names from various columns

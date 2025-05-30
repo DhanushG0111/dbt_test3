@@ -1,8 +1,9 @@
 -- models/dimensions/dim_officials.sql
 
 {{ config(
-    materialized="table" -- Or incremental if preferred
+    materialized="table"
 ) }}
+-- Or incremental if preferred
 
 -- Unpivot official names and IDs
 with officials_unpivoted as (

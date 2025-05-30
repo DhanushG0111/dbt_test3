@@ -1,8 +1,9 @@
 -- models/dimensions/dim_venues.sql
 
 {{ config(
-    materialized="table" -- Or incremental if preferred
+    materialized="table" 
 ) }}
+-- Or incremental if preferred
 
 with source_data as (
     select distinct

@@ -3,11 +3,11 @@
 {{ config(
     materialized="incremental",
     unique_key="delivery_key",
-    -- Add partitioning/clustering for performance if applicable to your warehouse (e.g., Snowflake)
+ 
+) }}
+   -- Add partitioning/clustering for performance if applicable to your warehouse (e.g., Snowflake)
     -- partition_by={"field": "match_date", "data_type": "date"},
     -- cluster_by=["match_id", "batting_team_id"]
-) }}
-
 with staging_data as (
     select * from {{ ref("stg_cricket_ipl_db__all_ipl_match_data") }}
 ),

@@ -23,7 +23,7 @@ match_bowling_stats as (
         sum(d.runs_total) as runs_conceded,
         sum(case when d.is_wicket = true and d.wicket_kind not in (
             -- Exclude run outs, retired hurt, etc. from bowler wickets
-            "run out", "retired hurt", "obstructing the field", "retired out"
+            'run out', 'retired hurt', 'obstructing the field', 'retired out'
             ) then 1 else 0 end) as wickets_taken,
         sum(case when d.runs_total = 0 then 1 else 0 end) as dot_balls,
         sum(case when d.runs_total = 4 then 1 else 0 end) as fours_conceded,

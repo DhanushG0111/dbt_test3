@@ -27,7 +27,7 @@ with staging_data as (
         player_of_match_id, -- Already have ID
         umpire_1_id, -- Already have ID
         umpire_2_id, -- Already have ID
-        tv_umpire_id, -- Already have ID
+        tv_umpires_id, -- Already have ID
         match_referees_id, -- Already have ID
         reserve_umpires_id, -- Already have ID
         
@@ -58,7 +58,7 @@ joined_dims as (
         stg.player_of_match_id, -- Assuming this is the correct FK
         stg.umpire_1_id, -- Assuming this is the correct FK
         stg.umpire_2_id, -- Assuming this is the correct FK
-        stg.tv_umpire_id, -- Assuming this is the correct FK
+        stg.tv_umpires_id, -- Assuming this is the correct FK
         stg.match_referees_id as match_referee_id, -- Renamed for consistency
         stg.reserve_umpires_id as reserve_umpire_id, -- Renamed for consistency
 
